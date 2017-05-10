@@ -1,29 +1,30 @@
-﻿(function (){
-   angular
-       .module('app', []);
 
-   app.glInit();
-   app.draw();
+glInit();
+
+var gl_int = (function (){
+
+   glInit();
+   draw();
 
 
-    app.glInit() = function () {
+    glInit() = function (){
         var that = this;
 
-        canvas = document.getElementById("canvas");
-        app.gl = canvas.getContext("webgl");
-        app.gl.viewport(0, 0, canvas.clientWidth, canvas.clientHeight);
-        app.gl.clearcolor(1, 1, 0, 1);
+        var canvas = document.getElementById("canvas");
+        var gl = canvas.getContext("webgl");
+        gl.viewport(0, 0, canvas.clientWidth, canvas.clientHeight);
+        gl.clearcolor(1, 1, 0, 1);
     }
 
-        app.draw() = function () {
+        draw() = function () {
 
-        app.gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.clear(gl.COLOR_BUFFER_BIT);
     }
 })
 
 
 
-initGL();
+/*initGL();
 draw();
 var gl;
 
@@ -36,4 +37,4 @@ function initGL() {
 
 function draw() {
     gl.clear(gl.COLOR_BUFFER_BIT);
-}
+}*?
