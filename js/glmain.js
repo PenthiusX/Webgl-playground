@@ -1,5 +1,5 @@
 
-glInit();
+/*glInit();
 
 var gl_int = (function (){
 
@@ -16,15 +16,12 @@ var gl_int = (function (){
         gl.clearcolor(1, 1, 0, 1);
     }
 
-        draw() = function () {
-
+    draw() = function () {
         gl.clear(gl.COLOR_BUFFER_BIT);
     }
-})
+})*/
 
-
-
-/*initGL();
+initGL();
 draw();
 var gl;
 
@@ -37,4 +34,15 @@ function initGL() {
 
 function draw() {
     gl.clear(gl.COLOR_BUFFER_BIT);
-}*?
+}
+
+
+var vertexShader = gl.createShader(gl.VERTEX_SHADER)
+
+gl.shaderSource(vertexShader,[
+'attribute vec2 positiion;',
+
+'void main(){'
+  'gl_position = vec4(positiion,.0,1.)'
+'}'
+])
