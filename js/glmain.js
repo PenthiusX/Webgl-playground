@@ -41,8 +41,7 @@ var vertexShader = gl.createShader(gl.VERTEX_SHADER)
 
 gl.shaderSource(vertexShader,[
 'attribute vec2 positiion;',
-
-'void main(){'
-  'gl_position = vec4(positiion,.0,1.)'
+'void main(){',
+'gl_position = vec4(positiion,.0,1.)',
 '}'
 ])
