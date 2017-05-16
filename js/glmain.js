@@ -32,16 +32,24 @@ function initGL() {
     gl.clearColor(1, .5, 0, 1);
 }
 
-function draw() {
+function draw(){
     gl.clear(gl.COLOR_BUFFER_BIT);
 }
 
-
 var vertexShader = gl.createShader(gl.VERTEX_SHADER)
+var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 
 gl.shaderSource(vertexShader,[
-'attribute vec2 positiion;',
+'in highp vec4 positiion;',
+'in mediump vec3 normal',
+'in mediump vec2 texcoord0',
+'out mediump vec3 va_normal',
+
 'void main(){',
-'gl_position = vec4(positiion,.0,1.)',
+'gl_position = ',
 '}'
+])
+
+gl.shaderSource(fragmentShader,[
+''
 ])
